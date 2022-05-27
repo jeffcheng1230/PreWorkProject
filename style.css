@@ -1,0 +1,19 @@
+html {
+    background-color:aqua;
+    text-align: center;
+}
+
+h1 {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+input, textarea {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.bubble {
+    display: inline;
+    margin-left: 3px;
+}
