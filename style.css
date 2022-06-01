@@ -1,19 +1,49 @@
-html {
-    background-color:aqua;
+.header {
+    height: 250px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.body1 {
+    background-color: turquoise;
+    display: flex;
+}
+
+.parContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.picContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.portrait {
+    width: 40%;
+}
+
+.footer {
+    height: 400px;
+    background-color: blueviolet;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textInput {
+    width: 100%;
+    margin: 10px;
+}
+
+.card {
     text-align: center;
-}
-
-h1 {
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-
-input, textarea {
-    display: block;
-    margin: auto;
-    margin-top: 10px;
-}
-
-.bubble {
-    display: inline;
-    margin-left: 3px;
+    height: 250px;
 }

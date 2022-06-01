@@ -1,41 +1,78 @@
 <!DOCTYPE html>
-<html> 
-    <head> 
-        <link rel="stylesheet" href="style.css">
-    </head>
-    
-    <body>
-       <h1> Welcome! My name is Jeffrey Cheng! </h1> 
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Jeffrey's Welcome Page</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <script src="" async defer></script>
 
-       <figure>
-           <img src="selfPicture.jpg" alt="A picture of me from my junior year of high school" style="width: 30%;">
-           <figcaption>
-               This is me! Check out my GitHub if you are interested: <strong> jeffcheng1230 </strong>
-           </figcaption>
-       </figure>
+    <div class="bg-dark w-100 text-center text-white header">
+      <h1>Welcome! My Name is Jeffrey Cheng!</h1>
+      <p style="margin: 10px">Read on to find out all about me :)</p>
+    </div>
 
-       <p>
-           Hi, my name is Jeffrey Cheng. I am a rising sophomore at Princeton University, where I am studying
-           computer science. I am from Bridgewater, New Jersey, where I have grown up my whole life. Thus, 
-           I am a New Jersey resident through and through, although I do make visits to Taiwan when possible.
-           <br>
-           Outside of academics, I spend much of my time playing ultimate frisbee for my school's team. I 
-           also enjoy playing piano and viola, and I have recently started picking up the Chinese yo-yo again.
-           During my free time, I like watching the NBA.
-       </p>
+    <div class="p-3 w-100 body1">
+      <div class="col-1"></div>
+      <div class="col-5 text-center parContainer">
+        <p style="width: 50%">
+          Hi, my name is Jeffrey Cheng. I am a rising sophomore at Princeton
+          University, where I am studying computer science. I am from
+          Bridgewater, New Jersey, where I have grown up my whole life. Thus, I
+          am a New Jersey resident through and through, although I do make
+          visits to Taiwan when possible.
+          <br />
+          Outside of academics, I spend much of my time playing ultimate frisbee
+          for my school's team. I also enjoy playing piano and viola, and I have
+          recently started picking up the Chinese yo-yo again. During my free
+          time, I like watching the NBA.
+        </p>
+      </div>
 
-       <section style="background-color:blue; color: white;">
-            <form>
-                <legend> If you want to get in contact, let me know! </legend>
-                <input type="text" placeholder="Full Name">
-                <input type="text" placeholder="Messaging Platform">
-                <input type="text" placeholder="Contact">
-                <textarea>Any introduction message? </textarea>
-                Are you from the U.S.? <input type="checkbox" class="bubble">
-                <p> If you are, which U.S. coast is best? </p>
-                East <input type="radio" class="bubble"> West <input type="radio" class="bubble"> 
-                <input type="submit">
-            </form>
-       </section>
-    </body>
+      <figure class="col-5 text-center picContainer">
+        <img class="portrait" src="selfPicture.jpg" />
+        <figcaption style="width: 30%">
+          This is me! Check out my GitHub if you are interested:
+          <b> jeffcheng1230 </b>
+        </figcaption>
+      </figure>
+      <div class="col-1"></div>
+    </div>
+
+    <form class="w-100 footer">
+      <div class="card w-25">
+        <div class="card-body">
+            <legend> Let me know if you want to get in contact! </legend>
+            <input class="textInput" type="text" placeholder="Full Name">
+            <input class="textInput" type="text" placeholder="Preferred Messaging Platform">
+            <input class="textInput" type="text" placeholder="Contact Handle">
+        </div>
+      </div>
+      <div class="card" style="width: 25vw; margin: 5px">
+        <div class="card-body">
+            <textarea class="textInput h-100" placeholder="Any introduction message?"></textarea>
+        </div>
+      </div>
+      <div class="card" style="width: 25vw; margin: 5px">
+        <div class="card-body">
+            <legend> Some fun questions :) </legend>
+            Are you from the U.S.? &nbsp
+            Yes <input type="checkbox" style="margin-left: 2px; margin-bottom: 15px;"> 
+            No <input type="checkbox" style="margin-left: 2px; margin-bottom: 15px;"> <br>
+            If you are (or if you aren't), which coast is the best coast? <br>
+            East Coast <input type="radio" style="margin-left: 2px; margin-top: 15px;">
+            West Coast <input type="radio" style="margin-left: 2px; margin-top: 15px;"> <br>
+            <div class="btn" style="border: 1px solid black; margin-top: 15px"> Submit Form </div>
+        </div>
+      </div>
+    </form>
+  </body>
 </html>
