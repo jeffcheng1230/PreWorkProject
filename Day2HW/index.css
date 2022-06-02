@@ -1,0 +1,49 @@
+.header {
+    height: 250px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.body1 {
+    background-color: turquoise;
+    display: flex;
+}
+
+.parContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.picContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.portrait {
+    width: 40%;
+}
+
+.footer {
+    height: 400px;
+    background-color: blueviolet;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textInput {
+    width: 100%;
+    margin: 10px;
+}
+
+.card {
+    text-align: center;
+    height: 250px;
+}
