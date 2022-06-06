@@ -3,6 +3,10 @@ class Task {
     this.name = name;
     this.completed = completed;
   }
+  static objToTask(obj) {
+    let t = new Task(obj.name, obj.completed);
+    return t;
+  }
 }
 
 // user interface class - contains all methods/fields for user interaction
@@ -14,6 +18,8 @@ class UI {
     this.tasks = JSON.parse(localStorage.getItem("tasks")); // list of tasks (stored as objects of class Task)
     if (this.tasks == undefined)
       this.tasks = [];
+    else
+      this.tasks = this.tasks.map((obj) => Task.objToTask(obj));
     this.sampleRow.remove();
     this.renderList();
   }
