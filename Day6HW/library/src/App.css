@@ -37,14 +37,5 @@
   }
 }
 
-.btn {
-  border: solid 1px black;
-}
-
-.btn-delete {
-  color: blue;
-}
-
-.row {
-  border-bottom: 1px solid gray;
+.card {
 }
