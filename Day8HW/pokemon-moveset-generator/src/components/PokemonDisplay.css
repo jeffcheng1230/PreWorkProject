@@ -1,0 +1,22 @@
+.PokemonDisplay {
+    display: flex;
+    height: 80vh;
+}
+
+.pokemon-info, .pokemon-sprite {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 50%;
+}
+
+.pokemon-name {
+    width: 80%;
+    height: 10%;
+    color: gray;
+    font-weight: bold;
+    font-size: 10vh;
+    margin-bottom: 25%;
+}

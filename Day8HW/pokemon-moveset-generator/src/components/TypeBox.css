@@ -1,0 +1,26 @@
+.pokemon-types {
+    width: 80%;
+    height: 10%;
+    color: white;
+    font-weight: bold;
+    font-size: 5vh;
+    text-align: center;
+}
+
+.type-box-full {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.type-box-half {
+    width: 45%;
+    border-radius: 20px;
+}
+
+.type-box-left {
+    float: left;
+}
+
+.type-box-right {
+    float: right;
+}

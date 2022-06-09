@@ -1,0 +1,9 @@
+body {
+  background-image: linear-gradient(to bottom right, black, blueviolet);
+  background-repeat: no-repeat;
+  height: 200vh;
+}
+
+.card {
+  background-image: linear-gradient(to bottom left, blue, black);
+}
