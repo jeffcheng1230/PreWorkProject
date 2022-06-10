@@ -42,7 +42,7 @@ export default function PokemonInput(props) {
           onChange={updatePokemonName}
         />
         <div className="input-group-append">
-          <button type="submit" className="btn btn-secondary" onClick={updatePokemon}>
+          <button type="submit" className="btn btn-secondary" onClick={updatePokemon}> {/* see Day task-list project (day 5?) to see how to make input submitable w/ enter key */}
             Submit
           </button>
         </div>
