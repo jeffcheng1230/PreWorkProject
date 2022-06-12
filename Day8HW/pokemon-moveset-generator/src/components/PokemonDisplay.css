@@ -1,6 +1,13 @@
+.loading {
+    width: 40vw;
+}
+
 .PokemonDisplay {
+    height: 110vh;
+}
+
+.name-sprite {
     display: flex;
-    height: 80vh;
 }
 
 .pokemon-info, .pokemon-sprite {
@@ -18,5 +25,13 @@
     color: gray;
     font-weight: bold;
     font-size: 10vh;
-    margin-bottom: 25%;
+    margin-bottom: 15%;
+}
+
+.move-row{
+    padding-left: 10%;
+    padding-right: 10%;
+
+    display: flex;
+    justify-content: space-between;
 }
