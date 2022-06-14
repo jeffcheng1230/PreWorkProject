@@ -26,6 +26,33 @@ export default function App() {
     let item = new Item(curItem.name, curItem.quantity, curItem.description);
     item = await RecipeServices.addItem(item);
     setItems([...items, item]);
+    setCurItem(new Item("", "", ""));
+  }
+
+  async function updateItem(name, quantity, description, id) {
+    let tempArr = items.slice();
+    for (let i = 0; i < items.length; i++) {
+      if (items[i].id == id) {
+        tempArr[i].name = name;
+        tempArr[i].quantity = quantity;
+        tempArr[i].description = description;
+        break;
+      }
+    }
+    setItems(tempArr);
+    await RecipeServices.editItem(name, quantity, description, id);
+  }
+
+  async function deleteItem(id) {
+    let tempArr = items.slice();
+    for (let i = 0; i < items.length; i++) {
+      if (items[i].id == id) {
+        tempArr.splice(i, 1);
+        break;
+      }
+    }
+    setItems(tempArr);
+    await RecipeServices.removeItem(id);
   }
 
   return (
@@ -33,38 +60,43 @@ export default function App() {
       <div className="container">
         <div className="card text-center p-3">
           <h1> Ingredients List </h1>
-          <div className="input-group">
-            <input
-              type="text"
-              className="form-control"
-              placeholder="Name"
-              onChange={editName}
-            ></input>
-            <input
-              type="text"
-              className="form-control"
-              placeholder="Quantity"
-              onChange={editQuantity}
-            ></input>
-            <input
-              type="text"
-              className="form-control"
-              placeholder="Description"
-              onChange={editDescription}
-            ></input>
-            <button
-              className="btn btn-secondary input-group-append"
-              onClick={appendItem}
-            >
-              +
-            </button>
-          </div>
+          <form>
+            <div className="input-group">
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Name"
+                value={curItem.name}
+                onChange={editName}
+              ></input>
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Quantity"
+                value={curItem.quantity}
+                onChange={editQuantity}
+              ></input>
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Description"
+                value={curItem.description}
+                onChange={editDescription}
+              ></input>
+              <button
+                type="submit"
+                className="btn btn-secondary input-group-append"
+                onClick={appendItem}
+              >
+                +
+              </button>
+            </div>
+          </form>
           <hr></hr>
           <IngredientList
             items={items}
-            editName={editName}
-            editQuantity={editQuantity}
-            editDescription={editDescription}
+            updateItem={updateItem}
+            deleteItem={deleteItem}
           ></IngredientList>
         </div>
       </div>
