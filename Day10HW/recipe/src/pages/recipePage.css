@@ -1,0 +1,13 @@
+h1 {
+  margin-bottom: 5%;
+}
+
+.input-group {
+  border: solid 1px black;
+  border-radius: 5px;
+  padding: 2%;
+}
+
+.form-control {
+  margin-right: 10%;
+}
